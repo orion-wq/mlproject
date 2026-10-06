@@ -1,6 +1,6 @@
 # Scam Message Detector 🔍
 
-A web app that analyzes suspicious SMS, UPI requests, and emails to detect scams using AI.
+A web app that analyzes suspicious SMS, UPI requests, and emails to detect scams using AI powered chatbot.
 
 ## Features
 - **Rule-based pre-check**: Fast regex detection of common scam patterns (no API cost)

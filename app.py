@@ -84,10 +84,10 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("### ℹ️ About")
     st.markdown(
-        "Uses Google Gemini AI + regex rules to detect SMS scams, "
+        "Uses AI (Groq / Cerebras / Gemini) + regex rules to detect SMS scams, "
         "UPI fraud, phishing emails, and more."
     )
-    st.caption("Built with Streamlit + Gemini API")
+    st.caption("Built with Streamlit")
 
 
 # ---------------------------------------------------------------------------
@@ -157,8 +157,8 @@ if analyze_clicked:
     with st.spinner("🔎 Running rule-based pre-check..."):
         rule_flags = check_rules(current_message)
 
-    # Step B: Send to Gemini for deep analysis
-    with st.spinner("🤖 Asking Gemini AI to analyze..."):
+    # Step B: Send to AI for deep analysis
+    with st.spinner("🤖 Asking AI to analyze..."):
         try:
             result: ScamAnalysis = analyze_message(current_message, rule_flags, language)
         except EnvironmentError as e:
